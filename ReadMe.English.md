@@ -7,29 +7,32 @@ Compilable with: **Visual Studio Community 2015 (C++11, 32/64-bit)**
 
 ---
 
-- TTBase.md
+- ReadMe.English.md
+- TTBase.English.md
 - Plugin.hpp
 - Plugin.cpp
 - MessageDef.hpp
 - MessageDef.cpp
 - Utility.hpp
 - Utility.cpp
-- x86.manifest
-- amd64.manifest
 - NYSL.TXT
-- TTBasePlugin
- - TTBasePlugin.sln
- - TTBasePlugin.vcxproj
- - TTBasePlugin.vcxproj.filters
- - TTBasePlugin.vcxproj.user
- - TTBasePlugin.def
- - TTBasePlugin.res
- - Main.hpp
- - Main.cpp  
+---
+- TTBasePlugin.sln
+- TTBasePlugin.vcxproj
+- TTBasePlugin.vcxproj.filters
+- TTBasePlugin.vcxproj.user
+- TTBasePlugin.def
+- TTBasePlugin.rc
+- resource.h
+- Main.hpp
+- Main.cpp
 
 ---
 
 ##Description
+
+###ReadMe.English.md
+The file you read now.
 
 ###TTBase.English.md
 The specification for TTBase plugin.  
@@ -55,16 +58,10 @@ Usually you don't have to change it.
 Utilities for copying strings, getting version info from the DLL file and so on.  
 Usually you don't have to change it.
 
-###x86.manifest / amd64.manifest
-Manifest file for Windows Visual Style.  
-You might have to modify this for the future versions of Windows.
-
 ###NYSL.TXT
 License for these files above.
 
 ---
-
-_Under [TTBasePlugin] folder_
 
 ###TTBasePlugin.sln
 The solution file for Visual C++ 2015.  
@@ -78,13 +75,13 @@ This will be automatically loaded when you open TTBase.sln.
 .def file for export functions of the plugin.  
 You may have to update it if the API version of the TTBase system is revised in the future.
 
-###TTBasePlugin.res
+###TTBasePlugin.rc / resource.h
 Resource file for the DLL.  
 You can edit it with applications such as ResEdit.
 
 ###Main.hpp / Main.cpp
 Main part of this template.  
-Make your own plugin with modifying this!!  
+Make your own plugin with modifying this!!
 
 ---
 
@@ -165,6 +162,10 @@ and the authors who produced the great number of plugins for TTBase.
 ---
 
 ###Change Log
+
+2016.03.30
+- Moved repository from TTBaseHost
+- Changed the folder constitution
 
 2016.01.30  
 - Changed development environment to VS2015 and C++11

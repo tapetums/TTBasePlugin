@@ -7,6 +7,7 @@ TTBase プラグインのためのスケルトンプロジェクトです。
 
 ---
 
+- ReadMe.md
 - TTBase.md
 - Plugin.hpp
 - Plugin.cpp
@@ -14,22 +15,24 @@ TTBase プラグインのためのスケルトンプロジェクトです。
 - MessageDef.cpp
 - Utility.hpp
 - Utility.cpp
-- x86.manifest
-- amd64.manifest
 - NYSL.TXT
-- TTBasePlugin
- - TTBasePlugin.sln
- - TTBasePlugin.vcxproj
- - TTBasePlugin.vcxproj.filters
- - TTBasePlugin.vcxproj.user
- - TTBasePlugin.def
- - TTBasePlugin.res
- - Main.hpp
- - Main.cpp  
+---
+- TTBasePlugin.sln
+- TTBasePlugin.vcxproj
+- TTBasePlugin.vcxproj.filters
+- TTBasePlugin.vcxproj.user
+- TTBasePlugin.def
+- TTBasePlugin.rc
+- resource.h
+- Main.hpp
+- Main.cpp
 
 ---
 
 ##説明
+
+###ReadMe.md
+いま表示されているファイルです。
 
 ###TTBase.md
 TTBase プラグインの仕様書です。  
@@ -52,16 +55,10 @@ TTBase で使用される各種メッセージを Windows に登録していま�
 ###Utility.hpp / Utility.cpp
 プラグインテンプレートの処理のうち、よく使われるものをまとめています。
 
-###x86.manifest / amd64.manifest
-バイナリにビジュアルスタイルを適用するためのマニフェストファイルです。  
-将来の Windows のバージョンでは、修正が必要になる可能性があります。
-
 ###NYSL.TXT
 このファイル群全体のライセンスを定義しています。
 
 ---
-
-_TTBasePlugin フォルダ 以下_
 
 ###TTBasePlugin.sln
 VC++用のソリューションファイルです。  
@@ -75,13 +72,13 @@ TTBase.sln を開くと、自動で読み込まれます。
 TTBase プラグイン のエクスポート関数の定義ファイルです。  
 TTBase の API バージョンに応じて、将来的に変更の必要が生じるかもしれません。
 
-###TTBasePlugin.res
+###TTBasePlugin.rc / resource.h
 DLL のリソースファイルです。  
 ResEdit などの対応アプリケーションで編集してください。
 
 ###Main.hpp / Main.cpp
 プラグインの処理を記述します。  
-この部分を改造して、あなたのプラグインを作ってください。  
+この部分を改造して、あなたのプラグインを作ってください。
 
 ---
 
@@ -162,6 +159,10 @@ TTBase を生み出された K2 さん、peach を 公開されている U さ�
 ---
 
 ###変更履歴
+
+2016.03.30
+- リポジトリを TTBaseHost から独立
+- フォルダの構成を変更
 
 2016.01.30  
 - 開発環境を VS2015 および C++11 に変更  
