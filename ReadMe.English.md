@@ -16,7 +16,9 @@ Compilable with: **Visual Studio Community 2015 (C++11, 32/64-bit)**
 - Utility.hpp
 - Utility.cpp
 - NYSL.TXT
+
 ---
+
 - TTBasePlugin.sln
 - TTBasePlugin.vcxproj
 - TTBasePlugin.vcxproj.filters
